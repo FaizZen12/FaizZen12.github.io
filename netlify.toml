@@ -1,0 +1,31 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/generate-summary"
+  to = "/.netlify/functions/generate-summary"
+  status = 200
+
+[[redirects]]
+  from = "/api/save-summary"
+  to = "/.netlify/functions/save-summary"
+  status = 200
+
+[[redirects]]
+  from = "/api/get-library"
+  to = "/.netlify/functions/get-library"
+  status = 200
+
+[[redirects]]
+  from = "/api/user/profile"
+  to = "/.netlify/functions/user-profile"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
